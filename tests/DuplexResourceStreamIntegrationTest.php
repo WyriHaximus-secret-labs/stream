@@ -347,7 +347,7 @@ class DuplexResourceStreamIntegrationTest extends TestCase
      * @covers React\Stream\ReadableResourceStream::handleData
      * @dataProvider loopProvider
      */
-    public function testEmptyReadShouldntFloseStream($condition, $loopFactory)
+    public function testEmptyReadShouldntFcloseStream($condition, $loopFactory)
     {
         if (true !== $condition()) {
             return $this->markTestSkipped('Loop implementation not available');
